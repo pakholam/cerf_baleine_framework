@@ -1,5 +1,6 @@
 import { shell } from "electron";
 import { checkUpdate, statistics } from "./common/version";
+import { onFileCreated } from './create-script';
 // @ts-ignore
 import packageJSON from '../package.json';
 
@@ -10,13 +11,16 @@ import packageJSON from '../package.json';
 export function load() {
     checkUpdate();
     statistics();
+    Editor.Message.addBroadcastListener('asset-db:asset-add', onFileCreated);
  }
 
 /**
  * @en Method triggered when uninstalling the extension
  * @zh 卸载扩展时触发的方法
  */
-export function unload() { }
+export function unload() {
+    Editor.Message.removeBroadcastListener('asset-db:asset-add', onFileCreated);
+ }
 
 export var config: any;
 

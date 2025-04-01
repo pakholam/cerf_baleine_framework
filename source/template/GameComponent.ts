@@ -1,5 +1,5 @@
 export const TemplateGameComponent = `import { _decorator } from 'cc';
-import { GameComponent } from "db://oops-framework/module/common/GameComponent";
+import { GameComponent } from "@/script/module/common/GameComponent";
 
 const { ccclass, property } = _decorator;
 

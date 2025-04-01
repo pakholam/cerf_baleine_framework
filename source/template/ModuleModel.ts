@@ -1,4 +1,4 @@
-export const TemplateModel = `import { ecs } from "db://oops-framework/libs/ecs/ECS";
+export const TemplateModel = `import { ecs } from "@/script/libs/ecs/ECS";
 
 /** 数据层对象 */
 @ecs.register('<%Name%>')

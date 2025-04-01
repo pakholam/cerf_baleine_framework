@@ -2,6 +2,7 @@
     "$schema": "./@types/schema/package/index.json",
     "package_version": 2,
     "name": "cerf_baleine_framework",
+    "description": "i18n:cerf_baleine_framework.description",
     "version": "1.0.0",
     "author": "cerf_baleine",
     "editor": ">=3.8.5",
@@ -11,7 +12,8 @@
         "watch": "tsc -w",
         "doc": "npx typedoc"
     },
-    "description": "i18n:cerf_baleine_framework.description",
+    "repository": "https://github.com/pakholam/cerf_baleine_framework",
+    "license": "MIT",
     "main": "./dist/main.js",
     "dependencies": {
         "vue": "^3.1.4",
@@ -30,7 +32,7 @@
         "set_file_name": {
             "title": "i18n:cerf_baleine_framework.panel_create_file",
             "type": "dockable",
-            "main": "dist/panels/default",
+            "main": "dist/default",
             "size": {
                 "min-width": 450,
                 "min-height": 300,
@@ -158,6 +160,9 @@
                 "methods": [
                     "animator_editor"
                 ]
+            },
+            "asset-db:asset-created": {
+                "methods": "onFileCreated"
             }
         }
     }

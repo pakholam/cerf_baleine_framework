@@ -1,6 +1,6 @@
 export const TemplateViewMvvm = `import { _decorator } from "cc";
-import { ecs } from "db://oops-framework/libs/ecs/ECS";
-import { CCVMParentComp } from "db://oops-framework/module/common/CCVMParentComp";
+import { ecs } from "@/script/libs/ecs/ECS";
+import { CCVMParentComp } from "@/script/module/common/CCVMParentComp";
 
 const { ccclass, property } = _decorator;
 
@@ -20,4 +20,4 @@ export class <%Name%>Comp extends CCVMParentComp {
     reset() {
         this.node.destroy();
     }
-}`
+}`;

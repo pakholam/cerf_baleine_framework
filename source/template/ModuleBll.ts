@@ -1,4 +1,4 @@
-export const TemplateBll = `import { ecs } from "db://oops-framework/libs/ecs/ECS";
+export const TemplateBll = `import { ecs } from "@/script/libs/ecs/ECS";
 
 /** 业务输入参数 */
 @ecs.register('<%Name%>')
