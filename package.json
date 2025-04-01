@@ -1,0 +1,164 @@
+{
+    "$schema": "./@types/schema/package/index.json",
+    "package_version": 2,
+    "name": "cerf_baleine_framework",
+    "version": "1.0.0",
+    "author": "cerf_baleine",
+    "editor": ">=3.8.5",
+    "scripts": {
+        "preinstall": "node ./scripts/preinstall.js",
+        "build": "tsc -b",
+        "watch": "tsc -w",
+        "doc": "npx typedoc"
+    },
+    "description": "i18n:cerf_baleine_framework.description",
+    "main": "./dist/main.js",
+    "dependencies": {
+        "vue": "^3.1.4",
+        "fs-extra": "^10.0.0",
+        "axios": "^1.7.7",
+        "systeminformation": "^5.23.5"
+    },
+    "devDependencies": {
+        "@cocos/creator-types": "^3.8.5",
+        "@types/fs-extra": "^9.0.5",
+        "@types/node": "^20.16.12",
+        "typedoc": "^0.23.24",
+        "typescript": "^4.8.2"
+    },
+    "panels": {
+        "set_file_name": {
+            "title": "i18n:cerf_baleine_framework.panel_create_file",
+            "type": "dockable",
+            "main": "dist/panels/default",
+            "size": {
+                "min-width": 450,
+                "min-height": 300,
+                "width": 450,
+                "height": 300
+            }
+        }
+    },
+    "contributions": {
+        "inspector": {
+            "section": {
+                "asset": {
+                    "directory": "./dist/asset-directory.js"
+                }
+            }
+        },
+        "scene": {
+            "script": "./dist/scene.js"
+        },
+        "asset-db": {
+            "mount": {
+                "path": "./assets",
+                "readonly": false
+            }
+        },
+        "assets": {
+            "menu": {
+                "methods": "./dist/assets-menu.js",
+                "assetMenu": "onAssetMenu"
+            }
+        },
+        "menu": [
+            {
+                "path": "i18n:cerf_baleine_framework.name/i18n:cerf_baleine_framework.tools",
+                "label": "i18n:cerf_baleine_framework.tools_animator_editor",
+                "message": "animator_editor"
+            },
+            {
+                "path": "i18n:cerf_baleine_framework.name",
+                "label": "i18n:cerf_baleine_framework.document_oops",
+                "message": "document"
+            },
+            {
+                "path": "i18n:cerf_baleine_framework.name",
+                "label": "i18n:cerf_baleine_framework.document_api",
+                "message": "documentApi"
+            },
+            {
+                "path": "i18n:cerf_baleine_framework.name",
+                "label": "i18n:cerf_baleine_framework.tutorial",
+                "message": "tutorial"
+            },
+            {
+                "path": "i18n:cerf_baleine_framework.name",
+                "label": "i18n:cerf_baleine_framework.solution",
+                "message": "solution"
+            },
+            {
+                "path": "i18n:cerf_baleine_framework.name",
+                "label": "i18n:cerf_baleine_framework.gitee",
+                "message": "gitee"
+            },
+            {
+                "path": "i18n:cerf_baleine_framework.name",
+                "label": "i18n:cerf_baleine_framework.github",
+                "message": "github"
+            },
+            {
+                "path": "i18n:cerf_baleine_framework.name",
+                "type": "separator"
+            },
+            {
+                "path": "i18n:cerf_baleine_framework.name",
+                "label": "i18n:cerf_baleine_framework.log",
+                "message": "log"
+            },
+            {
+                "path": "i18n:cerf_baleine_framework.name",
+                "label": "i18n:cerf_baleine_framework.update",
+                "message": "update"
+            }
+        ],
+        "messages": {
+            "document": {
+                "methods": [
+                    "document"
+                ]
+            },
+            "documentApi": {
+                "methods": [
+                    "documentApi"
+                ]
+            },
+            "log": {
+                "methods": [
+                    "log"
+                ]
+            },
+            "update": {
+                "methods": [
+                    "update"
+                ]
+            },
+            "tutorial": {
+                "methods": [
+                    "tutorial"
+                ]
+            },
+            "solution": {
+                "methods": [
+                    "solution"
+                ]
+            },
+            "gitee": {
+                "methods": [
+                    "gitee"
+                ]
+            },
+            "github": {
+                "methods": [
+                    "github"
+                ]
+            },
+            "animator_editor": {
+                "methods": [
+                    "animator_editor"
+                ]
+            }
+        }
+    }
+}

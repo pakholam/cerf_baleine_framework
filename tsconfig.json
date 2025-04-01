@@ -1,0 +1,28 @@
+{
+    "extends": "./base.tsconfig.json",
+    "compilerOptions": {
+        "target": "ES2017",
+        "module": "CommonJS",
+        "outDir": "./dist",
+        "rootDir": "./source",
+        "strict": true,
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "resolveJsonModule": true,
+        "experimentalDecorators": true,
+        "isolatedModules": true,
+        "types": [
+            "node",
+            "@cocos/creator-types/editor",
+            "./temp/declarations/cc.custom-macro",
+            "./temp/declarations/cc",
+            "./temp/declarations/jsb",
+            "./temp/declarations/cc.env"
+        ]
+    },
+    "exclude": [
+        "assets/**/*"
+    ]
+}
